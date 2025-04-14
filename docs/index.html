@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMG - Convert My Graphics</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+        :root {
+            --primary: #1095c1;
+            --primary-hover: #086788;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 100%);
+            color: white;
+            margin-bottom: 2rem;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .feature-card {
+            padding: 1.5rem;
+            border-radius: 8px;
+            background: var(--card-background-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .feature-card h3 {
+            margin-top: 0;
+            color: var(--primary);
+        }
+        .emoji-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .installation {
+            background: var(--card-background-color);
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        .usage {
+            background: var(--card-background-color);
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        pre {
+            background: var(--code-background-color);
+            padding: 1rem;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        .preset-list {
+            list-style: none;
+            padding: 0;
+        }
+        .preset-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--card-border-color);
+        }
+        .preset-list li:last-child {
+            border-bottom: none;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+            background: var(--card-background-color);
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <section class="hero">
+            <h1>CMG - Convert My Graphics</h1>
+            <p>A modern CLI tool for batch image conversion and optimization</p>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <div class="emoji-icon">🖼️</div>
+                <h3>Multiple Formats</h3>
+                <p>Convert between JPEG, PNG, WebP, GIF, TIFF, and BMP formats with ease.</p>
+            </div>
+            <div class="feature-card">
+                <div class="emoji-icon">⚡</div>
+                <h3>Web Optimization</h3>
+                <p>Optimize images for web with smart presets and quality settings.</p>
+            </div>
+            <div class="feature-card">
+                <div class="emoji-icon">📏</div>
+                <h3>Smart Resizing</h3>
+                <p>Resize images with web-friendly presets for desktop, tablet, and mobile.</p>
+            </div>
+        </section>
+
+        <section class="installation">
+            <h2>Installation</h2>
+            <p>Install globally (recommended):</p>
+            <pre><code>npm install -g .</code></pre>
+            <p>Or use without installation:</p>
+            <pre><code>npx cmg</code></pre>
+        </section>
+
+        <section class="usage">
+            <h2>Interactive Options</h2>
+            <div class="grid">
+                <div>
+                    <h3>Quality Presets</h3>
+                    <ul class="preset-list">
+                        <li>Maximum (100) - Lossless</li>
+                        <li>High (90) - Photos</li>
+                        <li>Medium (80) - Web optimal</li>
+                        <li>Low (60) - Small file size</li>
+                        <li>Custom quality...</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Width Presets</h3>
+                    <ul class="preset-list">
+                        <li>Original size</li>
+                        <li>Large (1920px) - Desktop</li>
+                        <li>Medium (1280px) - Tablet</li>
+                        <li>Small (768px) - Mobile</li>
+                        <li>Thumbnail (320px)</li>
+                        <li>Custom size...</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="usage">
+            <h2>Command Line Usage</h2>
+            <pre><code>cmg [options]
+
+Options:
+  -f, --format <type>     output format (jpeg, png, webp)
+  -q, --quality <number>  output quality (1-100)
+  -w, --width <pixels>    resize image width
+  -o, --output <dir>      output directory
+  -r, --recursive         process subdirectories</code></pre>
+        </section>
+
+        <section class="usage">
+            <h2>Examples</h2>
+            <pre><code># Basic usage with interactive prompts
+cmg
+
+# Convert to JPEG with 90% quality
+cmg -f jpeg -q 90
+
+# Convert and resize for desktop
+cmg -w 1920
+
+# Process all images in subdirectories
+cmg -r</code></pre>
+        </section>
+
+        <footer>
+            <p>Made with ❤️ for the web</p>
+            <p><a href="https://github.com/yourusername/cmg" role="button">View on GitHub</a></p>
+        </footer>
+    </main>
+</body>
+</html> 

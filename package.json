@@ -1,6 +1,6 @@
 {
   "name": "cmg",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Modern CLI tool for image conversion and optimization",
   "type": "module",
   "main": "index.js",
