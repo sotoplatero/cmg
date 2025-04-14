@@ -1,11 +1,11 @@
 {
-  "name": "imagino",
+  "name": "cmg",
   "version": "1.0.0",
   "description": "Modern CLI tool for image conversion and optimization",
   "type": "module",
   "main": "index.js",
   "bin": {
-    "imagino": "index.js"
+    "cmg": "./index.js"
   },
   "scripts": {
     "start": "node index.js"

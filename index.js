@@ -7,7 +7,13 @@ import { convertImages } from './lib/converter.js';
 import fs from 'fs';
 import { exec } from 'child_process';
 
-console.log(chalk.green('Welcome to Imagino: a modern CLI tool for image conversion and optimization.'));
+// Verificar si estamos en una terminal
+if (!process.stdout.isTTY) {
+    console.error(chalk.red('Error: This program must be run in a terminal.'));
+    process.exit(1);
+}
+
+console.log(chalk.green('Welcome to CMG: a modern CLI tool for image conversion and optimization.'));
 
 // Function to check and handle file system permissions
 function checkPermissions(directory) {
